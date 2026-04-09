@@ -16,11 +16,30 @@ import styles from "@/styles/CalendarView.module.css";
 interface CalendarViewProps {
   currentMonth: Date;
   selectedDate: Date;
+  dateRange: { startDate: Date | null; endDate: Date | null };
+  isSelectingRange: boolean;
   onMonthChange: (month: Date) => void;
   onDateClick: (date: Date) => void;
+  isDateInRange: (date: Date) => boolean;
+  isDateStart: (date: Date) => boolean;
+  isDateEnd: (date: Date) => boolean;
+  toggleRangeMode: () => void;
+  clearRange: () => void;
 }
 
-export default function CalendarView({ currentMonth, selectedDate, onMonthChange, onDateClick }: CalendarViewProps) {
+export default function CalendarView({ 
+  currentMonth, 
+  selectedDate, 
+  dateRange, 
+  isSelectingRange, 
+  onMonthChange, 
+  onDateClick, 
+  isDateInRange, 
+  isDateStart, 
+  isDateEnd, 
+  toggleRangeMode, 
+  clearRange 
+}: CalendarViewProps) {
   const nextMonth = () => onMonthChange(addMonths(currentMonth, 1));
   const prevMonth = () => onMonthChange(subMonths(currentMonth, 1));
 
@@ -79,6 +98,9 @@ export default function CalendarView({ currentMonth, selectedDate, onMonthChange
           const isCurrentMonth = isSameMonth(day, monthStart);
           const isSelected = isSameDay(day, selectedDate);
           const isWeekendDay = isWeekend(day);
+          const inRange = isDateInRange(day);
+          const isStart = isDateStart(day);
+          const isEnd = isDateEnd(day);
 
           let dayClass = styles.dayCell;
           if (isCurrentMonth) {
@@ -89,7 +111,16 @@ export default function CalendarView({ currentMonth, selectedDate, onMonthChange
           } else {
             dayClass += ` ${styles.otherMonth}`;
           }
-          if (isSelected) {
+          
+          if (isSelectingRange) {
+            if (isStart) {
+              dayClass += ` ${styles.rangeStart}`;
+            } else if (isEnd) {
+              dayClass += ` ${styles.rangeEnd}`;
+            } else if (inRange) {
+              dayClass += ` ${styles.rangeMiddle}`;
+            }
+          } else if (isSelected) {
             dayClass += ` ${styles.selected}`;
           }
 
@@ -107,8 +138,30 @@ export default function CalendarView({ currentMonth, selectedDate, onMonthChange
     );
   };
 
+  const renderRangeControls = () => {
+    return (
+      <div className={styles.rangeControls}>
+        <button 
+          className={`${styles.rangeModeButton} ${isSelectingRange ? styles.active : ''}`}
+          onClick={toggleRangeMode}
+        >
+          {isSelectingRange ? 'Range Selection' : 'Single Date'}
+        </button>
+        {isSelectingRange && dateRange.startDate && dateRange.endDate && (
+          <button className={styles.clearRangeButton} onClick={clearRange}>
+            Clear Range
+          </button>
+        )}
+        {isSelectingRange && dateRange.startDate && !dateRange.endDate && (
+          <span className={styles.rangeHint}>Select end date</span>
+        )}
+      </div>
+    );
+  };
+
   return (
     <div className={styles.calendarSection}>
+      {renderRangeControls()}
       {renderHeader()}
       {renderDays()}
       {renderCells()}

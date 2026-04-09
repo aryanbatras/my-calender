@@ -2,6 +2,96 @@
   flex: 1;
 }
 
+.rangeControls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.rangeModeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #374151;
+  padding: 2px 4px;
+  font-size: 0.7rem;
+  font-weight: 400;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  position: relative;
+}
+
+.rangeModeButton:hover {
+  color: #1f2937;
+}
+
+.rangeModeButton::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #d1d5db;
+  transition: all 0.2s;
+}
+
+.rangeModeButton:hover::after {
+  background-color: #374151;
+}
+
+.rangeModeButton.active {
+  color: #0ea5e9;
+  font-weight: 500;
+}
+
+.rangeModeButton.active::after {
+  background-color: #0ea5e9;
+  height: 2px;
+}
+
+.clearRangeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #374151;
+  padding: 2px 4px;
+  font-size: 0.65rem;
+  font-weight: 400;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.clearRangeButton:hover {
+  color: #1f2937;
+}
+
+.clearRangeButton::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #d1d5db;
+  transition: all 0.2s;
+}
+
+.clearRangeButton:hover::after {
+  background-color: #374151;
+}
+
+.rangeHint {
+  font-size: 0.7rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
 .calendarHeader {
   display: flex;
   justify-content: space-between;
@@ -120,8 +210,101 @@
   background-color: #1f2937;
 }
 
+.rangeStart {
+  background-color: #dbeafe;
+  border: 2px solid #3b82f6;
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.rangeStart .dayNumber::before {
+  content: 'START';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  background-color: #dbeafe;
+  padding: 1px 3px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.rangeEnd {
+  background-color: #dcfce7;
+  border: 2px solid #22c55e;
+  color: #166534;
+  font-weight: 600;
+}
+
+.rangeEnd .dayNumber::before {
+  content: 'END';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.5rem;
+  font-weight: 700;
+  color: #166534;
+  background-color: #dcfce7;
+  padding: 1px 3px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.rangeMiddle {
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
+  color: #0369a1;
+}
+
+.rangeMiddle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(59, 130, 246, 0.1);
+  pointer-events: none;
+}
+
+.rangeMiddle:hover {
+  background-color: #e0f2fe;
+  border-color: #7dd3fc;
+}
+
 @media (max-width: 640px) {
   .dayCell {
     font-size: 0.75rem;
+  }
+  
+  .rangeControls {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+  
+  .rangeModeButton {
+    font-size: 0.7rem;
+    padding: 8px 12px;
+  }
+  
+  .clearRangeButton {
+    font-size: 0.65rem;
+    padding: 6px 10px;
+  }
+  
+  .rangeHint {
+    font-size: 0.65rem;
+    text-align: center;
+  }
+  
+  .rangeStart .dayNumber::before,
+  .rangeEnd .dayNumber::before {
+    font-size: 0.4rem;
+    top: -6px;
   }
 }
