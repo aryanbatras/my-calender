@@ -70,6 +70,78 @@
   }
 }
 
+@media (max-width: 430px) {
+  .spiralLeft img,
+  .spiralRight img {
+    height: 115px;
+    top: -52px;
+  }
+  
+  .greyBoxContainer{
+    gap: 3.35px;
+    top: 79%;
+    left: 18.5%;
+  }
+  .greyBoxContainer div {
+    width: 4.25px;
+    height: 4.25px;
+  }
+}
+
+@media (max-width: 410px) {
+  .spiralLeft img,
+  .spiralRight img {
+    height: 110px;
+    top: -50px;
+  }
+  
+  .greyBoxContainer{
+    gap: 3.2px;
+    top: 78%;
+    left: 19%;
+  }
+  .greyBoxContainer div {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+@media (max-width: 390px) {
+  .spiralLeft img,
+  .spiralRight img {
+    height: 105px;
+    top: -48px;
+  }
+  
+  .greyBoxContainer{
+    gap: 3.05px;
+    top: 77%;
+    left: 19.5%;
+  }
+  .greyBoxContainer div {
+    width: 3.75px;
+    height: 3.75px;
+  }
+}
+
+@media (max-width: 370px) {
+  .spiralLeft img,
+  .spiralRight img {
+    height: 102px;
+    top: -46px;
+  }
+  
+  .greyBoxContainer{
+    gap: 2.9px;
+    top: 76%;
+    left: 19.8%;
+  }
+  .greyBoxContainer div {
+    width: 3.6px;
+    height: 3.6px;
+  }
+}
+
 @media (max-width: 400px) {
   .spiralLeft img,
   .spiralRight img {
@@ -85,6 +157,186 @@
   .greyBoxContainer div {
     width: 3.5px;
     height: 3.5px;
+  }
+}
+
+@media (max-width: 380px) {
+  .spiralLeft img,
+  .spiralRight img {
+    height: 95px;
+    top: -42px;
+  }
+  
+  .greyBoxContainer{
+    gap: 2.8px;
+    top: 75%;
+    left: 20.5%;
+  }
+  .greyBoxContainer div {
+    width: 3.2px;
+    height: 3.2px;
+  }
+}
+
+@media (max-width: 360px) {
+  .spiralLeft img,
+  .spiralRight img {
+    height: 90px;
+    top: -40px;
+  }
+  
+  .greyBoxContainer{
+    gap: 2.6px;
+    top: 74%;
+    left: 24%;
+  }
+  .greyBoxContainer div {
+    width: 2.9px;
+    height: 2.9px;
+  }
+}
+
+@media (max-width: 340px) {
+  .spiralLeft img,
+  .spiralRight img {
+    height: 85px;
+    top: -38px;
+  }
+  
+  .greyBoxContainer{
+    gap: 2.4px;
+    top: 73%;
+    left: 21.5%;
+  }
+  .greyBoxContainer div {
+    width: 2.6px;
+    height: 2.6px;
+  }
+}
+
+@media (max-width: 320px) {
+  .spiralLeft img,
+  .spiralRight img {
+    height: 82px;
+    top: -36px;
+  }
+  
+  .greyBoxContainer{
+    gap: 2.2px;
+    top: 72%;
+    left: 22%;
+  }
+  .greyBoxContainer div {
+    width: 2.3px;
+    height: 2.3px;
+  }
+}
+
+@media (max-width: 300px) {
+  .spiralLeft img,
+  .spiralRight img {
+    height: 78px;
+    top: -34px;
+  }
+  
+  .greyBoxContainer{
+    gap: 2px;
+    top: 71%;
+    left: 22.5%;
+  }
+  .greyBoxContainer div {
+    width: 2px;
+    height: 2px;
+  }
+}
+
+@media (max-width: 280px) {
+  .spiralLeft img,
+  .spiralRight img {
+    height: 74px;
+    top: -32px;
+  }
+  
+  .greyBoxContainer{
+    gap: 1.8px;
+    top: 70%;
+    left: 23%;
+  }
+  .greyBoxContainer div {
+    width: 1.7px;
+    height: 1.7px;
+  }
+}
+
+@media (max-width: 260px) {
+  .spiralLeft img,
+  .spiralRight img {
+    height: 70px;
+    top: -30px;
+  }
+  
+  .greyBoxContainer{
+    gap: 1.6px;
+    top: 69%;
+    left: 23.5%;
+  }
+  .greyBoxContainer div {
+    width: 1.4px;
+    height: 1.4px;
+  }
+}
+
+@media (max-width: 240px) {
+  .spiralLeft img,
+  .spiralRight img {
+    height: 66px;
+    top: -28px;
+  }
+  
+  .greyBoxContainer{
+    gap: 1.4px;
+    top: 68%;
+    left: 24%;
+  }
+  .greyBoxContainer div {
+    width: 1.1px;
+    height: 1.1px;
+  }
+}
+
+@media (max-width: 220px) {
+  .spiralLeft img,
+  .spiralRight img {
+    height: 62px;
+    top: -26px;
+  }
+  
+  .greyBoxContainer{
+    gap: 1.2px;
+    top: 67%;
+    left: 24.5%;
+  }
+  .greyBoxContainer div {
+    width: 0.8px;
+    height: 0.8px;
+  }
+}
+
+@media (max-width: 200px) {
+  .spiralLeft img,
+  .spiralRight img {
+    height: 58px;
+    top: -24px;
+  }
+  
+  .greyBoxContainer{
+    gap: 1px;
+    top: 66%;
+    left: 25%;
+  }
+  .greyBoxContainer div {
+    width: 0.5px;
+    height: 0.5px;
   }
 }
 
