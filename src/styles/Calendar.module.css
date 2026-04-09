@@ -245,31 +245,3 @@
   background-color: #1f2937;
 }
 
-/* Responsive */
-/* @media (max-width: 640px) {
-  .calendarContainer {
-    padding: 20px 10px;
-  }
-
-  .calendarPaper {
-    max-width: 100%;
-  }
-
-  .contentSection {
-    flex-direction: column;
-    padding: 15px;
-    gap: 15px;
-  }
-
-  .dayCell {
-    font-size: 0.7rem;
-  }
-
-  .weekday {
-    font-size: 0.55rem;
-  }
-
-  .navButton {
-    font-size: 1.1rem;
-  }
-} */

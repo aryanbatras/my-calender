@@ -33,6 +33,7 @@ export default function CalendarApp() {
   return (
     <div className={styles.calendarContainer}>
       <div className={styles.calendarPaper}>
+        
         <div className={styles.spiralContainer}>
           <SpiralWhiteOverlay />
           <SpiralBlackOverlay />

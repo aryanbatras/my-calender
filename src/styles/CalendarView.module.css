@@ -276,35 +276,476 @@
   border-color: #7dd3fc;
 }
 
-@media (max-width: 640px) {
+
+@media (max-width: 450px) {
+  .weekday {
+    font-size: 0.6rem;
+    padding: 6px 0;
+  }
+  
   .dayCell {
-    font-size: 0.75rem;
-  }
-  
-  .rangeControls {
-    flex-direction: column;
-    gap: 8px;
-    align-items: stretch;
-  }
-  
-  .rangeModeButton {
     font-size: 0.7rem;
-    padding: 8px 12px;
+    gap: 6px;
   }
   
-  .clearRangeButton {
-    font-size: 0.65rem;
-    padding: 6px 10px;
+  .daysGrid {
+    gap: 6px;
   }
   
-  .rangeHint {
-    font-size: 0.65rem;
-    text-align: center;
+  .weekdayHeader {
+    gap: 3px;
+    margin-bottom: 4px;
+  }
+  
+  .year {
+    font-size: 1rem;
+  }
+  
+  .month {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+  
+  .selected .dayNumber::after {
+    width: 12px;
+    height: 1.5px;
+    bottom: -4px;
   }
   
   .rangeStart .dayNumber::before,
   .rangeEnd .dayNumber::before {
+    font-size: 0.35rem;
+    top: -5px;
+    padding: 1px 2px;
+  }
+}
+
+@media (max-width: 430px) {
+  .weekday {
+    font-size: 0.57rem;
+    padding: 5.5px 0;
+  }
+  
+  .dayCell {
+    font-size: 0.67rem;
+    gap: 5.5px;
+  }
+  
+  .daysGrid {
+    gap: 5.5px;
+  }
+  
+  .weekdayHeader {
+    gap: 2.5px;
+    margin-bottom: 3.5px;
+  }
+  
+  .year {
+    font-size: 0.95rem;
+  }
+  
+  .month {
+    font-size: 0.77rem;
+    letter-spacing: 0.9px;
+  }
+  
+  .selected .dayNumber::after {
+    width: 11px;
+    height: 1.4px;
+    bottom: -3.5px;
+  }
+  
+  .rangeStart .dayNumber::before,
+  .rangeEnd .dayNumber::before {
+    font-size: 0.33rem;
+    top: -4.5px;
+    padding: 0.9px 1.8px;
+  }
+}
+
+@media (max-width: 410px) {
+  .weekday {
+    font-size: 0.54rem;
+    padding: 5px 0;
+  }
+  
+  .dayCell {
+    font-size: 0.64rem;
+    gap: 5px;
+  }
+  
+  .daysGrid {
+    gap: 5px;
+  }
+  
+  .weekdayHeader {
+    gap: 2px;
+    margin-bottom: 3px;
+  }
+  
+  .year {
+    font-size: 0.9rem;
+  }
+  
+  .month {
+    font-size: 0.74rem;
+    letter-spacing: 0.8px;
+  }
+  
+  .selected .dayNumber::after {
+    width: 10px;
+    height: 1.3px;
+    bottom: -3px;
+  }
+  
+  .rangeStart .dayNumber::before,
+  .rangeEnd .dayNumber::before {
+    font-size: 0.31rem;
+    top: -4px;
+    padding: 0.8px 1.6px;
+  }
+}
+
+@media (max-width: 390px) {
+  .weekday {
+    font-size: 0.51rem;
+    padding: 4.5px 0;
+  }
+  
+  .dayCell {
+    font-size: 0.61rem;
+    gap: 4.5px;
+  }
+  
+  .daysGrid {
+    gap: 4.5px;
+  }
+  
+  .weekdayHeader {
+    gap: 1.5px;
+    margin-bottom: 2.5px;
+  }
+  
+  .year {
+    font-size: 0.85rem;
+  }
+  
+  .month {
+    font-size: 0.71rem;
+    letter-spacing: 0.7px;
+  }
+  
+  .selected .dayNumber::after {
+    width: 9px;
+    height: 1.2px;
+    bottom: -2.5px;
+  }
+  
+  .rangeStart .dayNumber::before,
+  .rangeEnd .dayNumber::before {
+    font-size: 0.29rem;
+    top: -3.5px;
+    padding: 0.7px 1.4px;
+  }
+}
+
+@media (max-width: 370px) {
+  .weekday {
+    font-size: 0.48rem;
+    padding: 4px 0;
+  }
+  
+  .dayCell {
+    font-size: 0.58rem;
+    gap: 4px;
+  }
+  
+  .daysGrid {
+    gap: 4px;
+  }
+  
+  .weekdayHeader {
+    gap: 1px;
+    margin-bottom: 2px;
+  }
+  
+  .year {
+    font-size: 0.8rem;
+  }
+  
+  .month {
+    font-size: 0.68rem;
+    letter-spacing: 0.6px;
+  }
+  
+  .selected .dayNumber::after {
+    width: 8px;
+    height: 1.1px;
+    bottom: -2px;
+  }
+  
+  .rangeStart .dayNumber::before,
+  .rangeEnd .dayNumber::before {
+    font-size: 0.27rem;
+    top: -3px;
+    padding: 0.6px 1.2px;
+  }
+}
+
+@media (max-width: 350px) {
+  .weekday {
+    font-size: 0.45rem;
+    padding: 3.5px 0;
+  }
+  
+  .dayCell {
+    font-size: 0.55rem;
+    gap: 3.5px;
+  }
+  
+  .daysGrid {
+    gap: 3.5px;
+  }
+  
+  .weekdayHeader {
+    gap: 0.5px;
+    margin-bottom: 1.5px;
+  }
+  
+  .year {
+    font-size: 0.75rem;
+  }
+  
+  .month {
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .selected .dayNumber::after {
+    width: 7px;
+    height: 1px;
+    bottom: -1.5px;
+  }
+  
+  .rangeStart .dayNumber::before,
+  .rangeEnd .dayNumber::before {
+    font-size: 0.25rem;
+    top: -2.5px;
+    padding: 0.5px 1px;
+  }
+}
+
+@media (max-width: 330px) {
+  .weekday {
+    font-size: 0.42rem;
+    padding: 3px 0;
+  }
+  
+  .dayCell {
+    font-size: 0.52rem;
+    gap: 3px;
+  }
+  
+  .daysGrid {
+    gap: 3px;
+  }
+  
+  .weekdayHeader {
+    gap: 0.5px;
+    margin-bottom: 1px;
+  }
+  
+  .year {
+    font-size: 0.7rem;
+  }
+  
+  .month {
+    font-size: 0.62rem;
+    letter-spacing: 0.4px;
+  }
+  
+  .selected .dayNumber::after {
+    width: 6px;
+    height: 0.9px;
+    bottom: -1px;
+  }
+  
+  .rangeStart .dayNumber::before,
+  .rangeEnd .dayNumber::before {
+    font-size: 0.23rem;
+    top: -2px;
+    padding: 0.4px 0.8px;
+  }
+}
+
+@media (max-width: 310px) {
+  .weekday {
+    font-size: 0.39rem;
+    padding: 2.5px 0;
+  }
+  
+  .dayCell {
+    font-size: 0.49rem;
+    gap: 2.5px;
+  }
+  
+  .daysGrid {
+    gap: 2.5px;
+  }
+  
+  .weekdayHeader {
+    gap: 0px;
+    margin-bottom: 0.5px;
+  }
+  
+  .year {
+    font-size: 0.65rem;
+  }
+  
+  .month {
+    font-size: 0.59rem;
+    letter-spacing: 0.3px;
+  }
+  
+  .selected .dayNumber::after {
+    width: 5px;
+    height: 0.8px;
+    bottom: -0.5px;
+  }
+  
+  .rangeStart .dayNumber::before,
+  .rangeEnd .dayNumber::before {
+    font-size: 0.21rem;
+    top: -1.5px;
+    padding: 0.3px 0.6px;
+  }
+}
+
+@media (max-width: 290px) {
+  .weekday {
+    font-size: 0.36rem;
+    padding: 2px 0;
+  }
+  
+  .dayCell {
+    font-size: 0.46rem;
+    gap: 2px;
+  }
+  
+  .daysGrid {
+    gap: 2px;
+  }
+  
+  .weekdayHeader {
+    gap: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .year {
+    font-size: 0.6rem;
+  }
+  
+  .month {
+    font-size: 0.56rem;
+    letter-spacing: 0.2px;
+  }
+  
+  .selected .dayNumber::after {
+    width: 4px;
+    height: 0.7px;
+    bottom: 0px;
+  }
+  
+  .rangeStart .dayNumber::before,
+  .rangeEnd .dayNumber::before {
+    font-size: 0.19rem;
+    top: -1px;
+    padding: 0.2px 0.4px;
+  }
+}
+
+@media (max-width: 270px) {
+  .weekday {
+    font-size: 0.33rem;
+    padding: 1.5px 0;
+  }
+  
+  .dayCell {
+    font-size: 0.43rem;
+    gap: 1.5px;
+  }
+  
+  .daysGrid {
+    gap: 1.5px;
+  }
+  
+  .weekdayHeader {
+    gap: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .year {
+    font-size: 0.55rem;
+  }
+  
+  .month {
+    font-size: 0.53rem;
+    letter-spacing: 0.1px;
+  }
+  
+  .selected .dayNumber::after {
+    width: 3px;
+    height: 0.6px;
+    bottom: 0px;
+  }
+  
+  .rangeStart .dayNumber::before,
+  .rangeEnd .dayNumber::before {
+    font-size: 0.17rem;
+    top: -1px;
+    padding: 0.1px 0.2px;
+  }
+}
+
+@media (max-width: 250px) {
+  .weekday {
+    font-size: 0.3rem;
+    padding: 1px 0;
+  }
+  
+  .dayCell {
     font-size: 0.4rem;
-    top: -6px;
+    gap: 1px;
+  }
+  
+  .daysGrid {
+    gap: 1px;
+  }
+  
+  .weekdayHeader {
+    gap: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .year {
+    font-size: 0.5rem;
+  }
+  
+  .month {
+    font-size: 0.5rem;
+    letter-spacing: 0px;
+  }
+  
+  .selected .dayNumber::after {
+    width: 2px;
+    height: 0.5px;
+    bottom: 0px;
+  }
+  
+  .rangeStart .dayNumber::before,
+  .rangeEnd .dayNumber::before {
+    font-size: 0.15rem;
+    top: -1px;
+    padding: 0px 0px;
   }
 }
